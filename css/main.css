@@ -1,0 +1,275 @@
+html {
+  background: url('../src/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font: 95% Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+input{
+  display:block;
+  margin:5px 0;
+  box-sizing: border-box;
+}
+
+input[type=checkbox] {
+    float: left;
+    margin-right: 0.4em;
+}
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+
+  height: 7px;
+  border: 1px solid #bdc3c7;
+  background-color: #fff;
+}
+.equal-box label{
+  float: left;
+}
+#canvas-basic {}
+
+#downloadbtn{
+  text-transform: uppercase;
+}
+
+.main {
+  margin: auto;
+  padding: 8px;
+  background: #F7F7F7;
+}
+
+.main-title {
+  background-color: #43D1AF;
+  text-align: center;
+  border-bottom: 3px solid rgba(162, 179, 181, 0.95);
+}
+
+.main-img {
+  position: relative;
+  background: url('../src/img.png');
+  width: auto;
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 128px;
+  height: auto;
+  padding: 10px 10px;
+  font-size: large;
+}
+
+.settings-title {
+  background-color: #43D1AF;
+  position: relative;
+  width: 100%;
+  clear: both;
+  height: auto;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.settings-info {
+  background-color: #D3D3D3;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+
+.settings-category {
+  position: relative;
+}
+
+.settings-box {
+  overflow:hidden;
+  float: left;
+  border: 0;
+  background: #e0e0e0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+#keepeql {
+
+}
+
+.popup {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  padding-top: 100px;
+  /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.popup input {
+  font-size: 150%;
+}
+
+/* Modal Content */
+
+.popup-content {
+  position: relative;
+  margin: auto;
+  border: 1px solid #888;
+  padding: 8px;
+  background: #F7F7F7;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.25s
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: -300px;
+    opacity: 0
+  }
+  to {
+    top: 0;
+    opacity: 1
+  }
+}
+
+/* The Close Button */
+
+.close {
+  color: white;
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.close:hover, .close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.popup-header {
+  padding: 2px 16px;
+  background-color: #43D1AF;
+  text-align: center;
+  color: white;
+}
+
+.popup-body {
+  padding-top: 4px;
+}
+
+.btn {
+  background-color: #43D1AF;
+  color: white;
+  border: none;
+  height: 75px;
+  width: 100%;
+}
+
+#loadbtn {
+  height: 75px;
+}
+
+.btn:hover {
+  background-color: #36A084;
+}
+
+.methodbtn {
+  border-radius: 2px;
+  ;
+  border: 0;
+  background: #e0e0e0;
+  font-weight: 600;
+  height: 36px;
+  letter-spacing: 1px;
+  margin: 6px;
+  text-transform: uppercase;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: 0s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .26);
+}
+
+.methodbtn:active {
+  background: #A0A0A0;
+  box-shadow: 0 8px 15px 0 rgba(0, 0, 0, .2);
+  transition-delay: 0s;
+}
+
+}
+
+.slider {
+  width: 100%;
+}
+
+#imageauthor{
+  margin 6px:
+}
+.heading {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-family: 'nations';
+  font-weight: bold;
+  position: relative;
+  top: 10px;
+  margin-bottom: 10px;
+}
+
+.imgcrop {
+  display: none;
+}
+
+.imgresolution {
+  display: none;
+}
+
+input, label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+}
+
+input[type=text] {
+  position: relative;
+  margin: 6px auto;
+  width: 95%;
+
+}
+
+input:last-child {}
