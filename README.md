@@ -1,6 +1,8 @@
 # ImageAdapter
 Edit images locally - build with JS.
 
+Check the page  [here](https://ijee.github.io/ImageAdapter/).
+
 Everything is being done locally with javascript on a canvas.
 
 ## Features
