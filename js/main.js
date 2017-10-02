@@ -98,15 +98,24 @@ $(document).ready(function() {
     $("input[name=rangeInput_vert]").val($("input[name=amount_vert]").val());
   });
   //keep input range slider and text input the same
-  //TODO
-  $("input[name=rangeInput_hor], input[name=rangeInput_vert]").change(function() {
-
+  $("input[name=rangeInput_hor]").on('input', function() {
+    $("input[name=amount_hor]").val($("input[name=rangeInput_hor]").val());
     if ($("#keepeql").is(':checked')) {
-      if ($("input[name=rangeInput_hor]").is(':focus')) {
-        $("input[name=amount_hor]").val($("input[name=rangeInput_hor]").val());
-      }
+      $("input[name=amount_vert]").val($("input[name=amount_hor]").val());
+      $("input[name=rangeInput_hor]").val($("input[name=amount_hor]").val());
+      $("input[name=rangeInput_vert]").val($("input[name=amount_vert]").val());
     }
   });
+  //keep input range slider and text input the same
+  $("input[name=rangeInput_vert]").on('input', function() {
+    $("input[name=amount_vert").val($("input[name=rangeInput_vert]").val());
+    if ($("#keepeql").is(':checked')) {
+      $("input[name=amount_hor]").val($("input[name=amount_vert]").val());
+      $("input[name=rangeInput_hor]").val($("input[name=amount_hor]").val());
+      $("input[name=rangeInput_vert]").val($("input[name=amount_vert]").val());
+    }
+  });
+
   //calculate and set width or height of textfield if keepasp2 is checked for resizeImg
   $("input[name=tileresx], input[name=tileresy]").keyup(function() {
     if ($("#keepasp1").is(':checked')) {
@@ -116,7 +125,7 @@ $(document).ready(function() {
       }
       if ($("input[name=tileresy]").is(':focus')) {
         //width = height * ratio;;
-        $("input[name=tileresx]").val(Math.round(($("input[name=tileresy]").val() * ratio) * 1 ) / 1);
+        $("input[name=tileresx]").val(Math.round(($("input[name=tileresy]").val() * ratio) * 1) / 1);
       }
     }
   });
@@ -130,7 +139,7 @@ $(document).ready(function() {
       }
       if ($("input[name=resy]").is(':focus')) {
         //width = height * ratio;;
-        $("input[name=resx]").val(Math.round(($("input[name=resy]").val() * ratio) * 1 ) / 1);
+        $("input[name=resx]").val(Math.round(($("input[name=resy]").val() * ratio) * 1) / 1);
       }
     }
   });

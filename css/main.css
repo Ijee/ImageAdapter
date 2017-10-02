@@ -16,31 +16,50 @@ h3 {
   margin: 0;
   padding: 0;
 }
-input{
-  display:block;
-  margin:5px 0;
+
+input {
+  display: block;
+  margin: 5px 0;
   box-sizing: border-box;
 }
 
 input[type=checkbox] {
-    float: left;
-    margin-right: 0.4em;
+  float: left;
+  margin-right: 0.4em;
 }
+
 input[type=range] {
   -webkit-appearance: none;
   width: 100%;
-
   height: 7px;
   border: 1px solid #bdc3c7;
   background-color: #fff;
 }
-.equal-box label{
+
+.equal-box label {
   float: left;
 }
+
 #canvas-basic {}
 
-#downloadbtn{
+#downloadbtn {
   text-transform: uppercase;
+}
+
+.author{
+  background-color: black;
+  width: auto;
+  color: white;
+  padding: 4px 6px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+  display: inline-block;
+  border-radius: 3px;
+  margin: 6px 0;
+}
+#credit a{
+  text-decoration: none;
 }
 
 .main {
@@ -90,38 +109,28 @@ input[type=range] {
 }
 
 .settings-box {
-  overflow:hidden;
+  overflow: hidden;
   float: left;
   border: 0;
   background: #e0e0e0;
   font-weight: 500;
   letter-spacing: 1px;
 }
-#keepeql {
 
-}
+#keepeql {}
 
 .popup {
   display: none;
-  /* Hidden by default */
   position: fixed;
-  /* Stay in place */
   z-index: 1;
-  /* Sit on top */
   padding-top: 100px;
-  /* Location of the box */
   left: 0;
   top: 0;
   width: 100%;
-  /* Full width */
   height: 100%;
-  /* Full height */
   overflow: auto;
-  /* Enable scroll if needed */
   background-color: rgb(0, 0, 0);
-  /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
 }
 
 .popup input {
@@ -236,9 +245,10 @@ input[type=range] {
   width: 100%;
 }
 
-#imageauthor{
+#imageauthor {
   margin 6px:
 }
+
 .heading {
   display: flex;
   justify-content: center;
@@ -269,7 +279,4 @@ input[type=text] {
   position: relative;
   margin: 6px auto;
   width: 95%;
-
 }
-
-input:last-child {}
