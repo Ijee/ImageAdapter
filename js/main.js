@@ -25,6 +25,7 @@ var image = new Image();
  */
 
 $(document).ready(function() {
+  //$('input,textarea').attr('autocomplete', 'off');
   //show modal
   $(".main-img").click(function() {
     $("#myModal").css("display", "block");
@@ -121,6 +122,7 @@ $(document).ready(function() {
     if ($("#keepasp1").is(':checked')) {
       if ($("input[name=tileresx]").is(':focus')) {
         //height = width / ratio;
+        alert(ratio);
         $("input[name=tileresy]").val(Math.round(($("input[name=tileresx]").val() / ratio) * 1) / 1);
       }
       if ($("input[name=tileresy]").is(':focus')) {
@@ -129,6 +131,31 @@ $(document).ready(function() {
       }
     }
   });
+  /*$("input[name=tileresx], input[name=tileresy]").keyup(function() {
+    if ($(".keepasp").is(':checked')) {
+      if (lastPressed == 0) {
+        if ($("input[name=tileresx]").is(':focus')) {
+          //height = width / ratio;
+          $("input[name=tileresy]").val(Math.round(($("input[name=tileresx]").val() / ratio) * 1) / 1);
+        }
+        if ($("input[name=tileresy]").is(':focus')) {
+          //width = height * ratio;;
+          $("input[name=tileresx]").val(Math.round(($("input[name=tileresy]").val() * ratio) * 1) / 1);
+        }
+      } if(lastPressed == 1) {
+        if ($(".keepasp").is(':checked')) {
+          if ($("input[name=resx]").is(':focus')) {
+            //height = width / ratio;
+            $("input[name=resy]").val(Math.round(($("input[name=resx]").val() / ratio) * 1) / 1);
+          }
+          if ($("input[name=resy]").is(':focus')) {
+            //width = height * ratio;;
+            $("input[name=resx]").val(Math.round(($("input[name=resy]").val() * ratio) * 1) / 1);
+          }
+        }
+      }
+    }
+  });*/
 
   //The same for imgTile and keepasp1
   $("input[name=resx], input[name=resy]").keyup(function() {
@@ -240,6 +267,8 @@ function updateSettings() {
   title = $(".main-title").children("h3").text();
 
   //aspect ratio
+  alert(image.width);
+  alert(image.height);
   ratio = image.width / image.height;
 
   //for image tiles
@@ -279,6 +308,6 @@ function zipIt(imgArray) {
       type: "blob"
     })
     .then(function(blob) {
-      saveAs(blob, title + "[imagemanager].zip");
+      saveAs(blob, title + "[ImageAdapter].zip");
     });
 }

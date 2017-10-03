@@ -3,13 +3,13 @@
 
 <head>
   <title>ImageAdapter</title>
+  <meta charset="utf-8"/>
   <link rel="shortcut icon" type="image/x-icon" href="src/favicon.ico" />
   <link rel="stylesheet" href="css/simple-grid.min.css">
   <link rel="stylesheet" href="css/main.css">
   <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
   <script src="js/granim.min.js" type="text/javascript"></script>
   <script src="js/jszip.min.js" type="text/javascript"></script>
-  <script src="js/mainsetting_html.js" type="text/javascript"></script>
   <script src="js/FileSaver.min.js" type="text/javascript"></script>
   <script src="js/main.js" type="text/javascript"></script>
 </head>
@@ -21,7 +21,7 @@
         <h3>No Image Selected</h3>
       </div>
       <div class="col-12 main-img"></div>
-      <form>
+      <form autocomplete="off">
         <div class="settings">
           <div class="col-12 settings-title">Select Method</div>
           <button type="button" id="tileimg" class="col-4 methodbtn">Image Tiles</button>
@@ -63,7 +63,7 @@
                 <label for="tileresy">Height:</label>
                 <input type="text" name="tileresy" placeholder="height in px">
                 <div class="equal-box">
-                  <input type="checkbox" id="keepasp1" class="checkbox" name=keepasp1>
+                  <input type="checkbox" id="keepasp1" class="checkbox keepasp" name=keepasp1>
                   <label for="keepasp1">Keep aspect ratio
               </div>
             </div>
@@ -81,7 +81,7 @@
                   <label for="resy">Height:</label>
                   <input type="text" name="resy" placeholder="Height in px">
                   <div class="equal-box">
-                    <input type="checkbox" id="keepasp2" class="checkbox" name=keepasp2>
+                    <input type="checkbox" id="keepasp2" class="checkbox keepasp" name=keepasp2>
                     <label for="keepasp2">Keep aspect ratio</label>
                   </div>
                 </div>
@@ -121,18 +121,20 @@
     </div>
     <!-- Popup -->
     <div id="myModal" class="popup">
-      <div class="col-6 popup-content">
-        <div class="popup-header">
-          <span class="close">&times;</span>
-          <h2>LOAD IMAGE</h2></div>
-        <div class="popup-body">
-          <input type="text" name="usrurl" placeholder="Paste the direct link..."><br>
-          <div class="settings-title">- or upload your own image -</div>
-          <input type="file" id="file">
-          <!-- <input type='button' id='load-file' value='Load'> -->
-          <button type="button" id="loadbtn" class="col-12 btn"><h3>O.K.!</h3></button>
+      <form autocomplete="off">
+        <div class="col-6 popup-content">
+          <div class="popup-header">
+            <span class="close">&times;</span>
+            <h2>LOAD IMAGE</h2></div>
+          <div class="popup-body">
+            <input type="text" name="usrurl" placeholder="Paste the direct link..."><br>
+            <div class="settings-title">- or upload your own image -</div>
+            <input type="file" id="file">
+            <!-- <input type='button' id='load-file' value='Load'> -->
+            <button type="button" id="loadbtn" class="col-12 btn"><h3>O.K.!</h3></button>
+          </div>
         </div>
-      </div>
+      </form>
     </div>
     <div id="tip" class="popup">
       <div class="col-6 popup-content">
