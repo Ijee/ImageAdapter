@@ -122,7 +122,6 @@ $(document).ready(function() {
     if ($("#keepasp1").is(':checked')) {
       if ($("input[name=tileresx]").is(':focus')) {
         //height = width / ratio;
-        alert(ratio);
         $("input[name=tileresy]").val(Math.round(($("input[name=tileresx]").val() / ratio) * 1) / 1);
       }
       if ($("input[name=tileresy]").is(':focus')) {
@@ -200,6 +199,9 @@ function loadImg(path, img, target) {
     //image.setAttribute('crossOrigin', '');
     image.crossOrigin = "anonymous";
     image.src = path;
+    image.onload = function() {
+      updateSettings();
+    };
     $(target).html('<img src="' + path + '">');
     $(target).children("img").attr("width", "100%");
     $(target).children("img").attr("height", "auto");
@@ -266,9 +268,7 @@ function updateSettings() {
   //update title
   title = $(".main-title").children("h3").text();
 
-  //aspect ratio
-  alert(image.width);
-  alert(image.height);
+  //set image ratio
   ratio = image.width / image.height;
 
   //for image tiles
